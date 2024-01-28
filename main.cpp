@@ -17,6 +17,24 @@ public:
     bool isdoorlocked() const;
 };
 
+// Default constructor
+Door::Door() : isopen(false), islocked(false) {}
+
+// Function to open the door
+void Door::opendoor() {
+    if (!islocked) {
+        isopen = true;
+        cout << "Door is now open." << endl;
+    } else {
+        cout << "Cannot open the door. It is locked." << endl;
+    }
+}
+
+// Function to close the door
+void Door::closedoor() {
+    isopen = false;
+    cout << "Door is now closed." << endl;
+}
 
 int main() {
     cout << "Hello World" << endl;
